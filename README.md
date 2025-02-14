@@ -37,9 +37,10 @@ This project consists of a simple webpage with a "Yes" and "No" button. When the
 
 ## A Note on Code Usage 
 
-While I am happy to share this project, I encourage you to use it as inspiration.
-If you use this code as a base for your own project, please give credit where it's due. A simple shoutout or link back to this repository is appreciated!
+This project was made with a base code that was made by ivysone, their repo linked here: https://github.com/ivysone/Will-you-be-my-Valentine-
+Make sure to check them out!
 
+This project was originally based on code created by [ivysone] (https://github.com/ivysone/Will-you-be-my-Valentine-). If you decide to use or modify this code for your own project, please give credit to both the original creator and me by linking to this [repository](https://github.com/juliatjia/willyoubemyvalentine). A simple shoutout or link back to this repository would be greatly appreciated. Thank you for respecting the work of all contributors!
 
 ---
 
@@ -59,7 +60,7 @@ If you use this code as a base for your own project, please give credit where it
 
 - `handleNoClick()`: Changes the "No" button text and increases the size of the "Yes" button.
 - `handleYesClick()`: Redirects the user to `yes_page.html`.
-
+- `handleBackToHome()`: Redirects the user to `index.html`.
 ---
 
 ## License 📄
@@ -68,4 +69,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Enjoy 💖
+Enjoy <33
