@@ -2,10 +2,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto;
     margin: 0;
     background-color: #f9e3e3;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Darumadrop One', serif;
 }
 
 .container {
@@ -15,7 +15,42 @@ body {
 .header_text {
     font-size: 3em;
     color: #d32f2f;
+    margin: 0 15px;
 }
+
+p {
+    font-size: 1.5em;
+    color: #d32f2f;
+}
+
+.buttons {
+    margin-top: 20px;
+  }
+  
+  .yes-button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #f9e3e3;
+    color: #d32f2f;
+    border: none;
+    border-radius: 15px;
+    border: outset;
+    cursor: pointer;
+    font-family: 'Darumadrop One', serif;
+  }
+
+  .yes-button:hover {
+    color: #d32f2f;
+    font-weight: bold;
+    animation: pulse 1s infinite alternate;
+    box-shadow: 0 0 10px rgba(151, 143, 143, 0.5);
+  }
+
+  @keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+  }
 
 .gif_container img {
     width: 100%; 

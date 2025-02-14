@@ -5,16 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Will You Be My Valentine?</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Darumadrop+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
+        <h1>hi jake!</h1>
+        <p>a very special day is coming up... and there's just one question on my mind!</p>
+    </div>
+
+    <div class="love-letter" onclick="toggleLetter()">
+        💌 <span id="letter-text">Click me for a secret message!</span>
+    </div>
+    <p id="secret-message" style="display: none;">i love you so much and william says hai! :D 💖</p>
+
+    <div class="gif_swipe">
+        <img src="https://media4.giphy.com/media/kyjBOZV2SsmIPGDjIE/giphy.webp" alt="Cute GIF">    
+    </div>
+
+    <div class="container">
         <h1>Will you be my Valentine?</h1>
+        <p>(don't click no pls....)</p>
+        <p>(that means <u>DON'T</u> try to press the red button o.O)</p>
         <div class="buttons">
-            <button class="yes-button" onclick="handleYesClick()">Yes</button>
-            <button class="no-button" onclick="handleNoClick()">No</button>
+            <button class="yes-button" onclick="handleYesClick()">Yes :D</button>
+            <button class="no-button" onclick="handleNoClick()">No :(</button>
         </div>
         <div class="gif_container">
-            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW5lenZyZHI5OXM2eW95b3pmMG40cWVrMDhtNjVuM3A4dGNxa2g2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/VM1fcpu2bKs1e2Kdbj/giphy.gif" alt="Cute GIF">
+            <img src="https://64.media.tumblr.com/e864c82850ae938aec450791bd2d338c/cbc89180cadf1e00-19/s250x400/6a5a1d27c0cec42bc24b7b28ffdd316ec5835080.gifv" alt="Cute GIF">
         </div>
     </div>
     <script src="script.js"></script>

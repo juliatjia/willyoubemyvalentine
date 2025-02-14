@@ -53,17 +53,31 @@
     }
 })();
 */
+
+function toggleLetter() {
+    const message = document.getElementById("secret-message");
+    const letterText = document.getElementById("letter-text");
+
+    if (message.style.display === "none") {
+        message.style.display = "block";
+        letterText.textContent = "Hide the secret message!";
+    } else {
+        message.style.display = "none";
+        letterText.textContent = "Click me for a secret message!";
+    }
+}
+
 const messages = [
-    "Are you sure?",
-    "Really sure??",
-    "Are you positive?",
-    "Pookie please...",
-    "Just think about it!",
-    "If you say no, I will be really sad...",
-    "I will be very sad...",
-    "I will be very very very sad...",
-    "Ok fine, I will stop asking...",
-    "Just kidding, say yes please! ❤️"
+    "are you sure?",
+    "really sure??",
+    "rly boi william is gonna be sad",
+    "k imma just go cry in a corner",
+    "stop cappin dawg ik u wanna say yes",
+    "bro wants to be valentines with marvel rivals instead",
+    "im not gonna buy u anymore ferro rochers.",
+    "just say u dont love me",
+    "k williams sad now.",
+    "dAWG there's no way u saying no to william and dis face"
 ];
 
 let messageIndex = 0;
@@ -79,4 +93,8 @@ function handleNoClick() {
 
 function handleYesClick() {
     window.location.href = "yes_page.html";
+}
+
+function handleBackToHome() {
+    window.location.href = "index.html";
 }
