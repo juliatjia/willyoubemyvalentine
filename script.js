@@ -98,3 +98,73 @@ function handleYesClick() {
 function handleBackToHome() {
     window.location.href = "index.html";
 }
+
+let moveDistance = 20;
+document.addEventListener("DOMContentLoaded", function () {
+    const noButton = document.querySelector('.no-button');
+    const yesButton = document.querySelector('.yes-button');
+
+    noButton.addEventListener("mouseenter", function () {
+        moveNoButton();
+        enlargeYesButton();
+    });
+});
+
+// function moveNoButton() {
+//     const noButton = document.querySelector('.no-button');
+
+//     // Get viewport width and height
+//     const viewportWidth = window.innerWidth;
+//     const viewportHeight = window.innerHeight;
+
+//     // Get new random position within the viewport
+//     let newX = Math.random() * (viewportWidth - 100); // Keep some margin
+//     let newY = Math.random() * (viewportHeight - 100);
+
+//     noButton.style.position = "absolute";
+//     noButton.style.left = `${newX}px`;
+//     noButton.style.top = `${newY}px`;
+
+//     // Update button text
+//     noButton.textContent = messages[messageIndex];
+//     messageIndex = (messageIndex + 1) % messages.length;
+
+//     // Increase move distance to make the button jump further next time
+//     moveDistance += 20;
+// }
+
+function moveNoButton() {
+    const noButton = document.querySelector('.no-button');
+
+    // Get the container (the space where the question is located)
+    const container = document.querySelector('.ques_container');
+    const containerRect = container.getBoundingClientRect();
+
+    // Ensure the button stays within the container and doesn't move outside
+    const minY = containerRect.top + window.scrollY; // 755px offset from the top
+    const maxY = containerRect.bottom + window.scrollY - noButton.offsetHeight;
+
+    // Generate random positions within the allowed space
+    const newX = Math.random() * (window.innerWidth - 200); // Keep some margin
+    const newY = Math.random() * (maxY - minY) + minY; // Ensure it stays within the scroll area
+
+    // Apply the new position to the "No" button
+    noButton.style.position = "absolute";
+    noButton.style.left = `${newX}px`;
+    noButton.style.top = `${newY}px`;
+
+    // Update button text with a new message
+    noButton.textContent = messages[messageIndex];
+    messageIndex = (messageIndex + 1) % messages.length;
+
+    // Increase move distance to make the button jump further next time
+    moveDistance += 20;
+}
+
+function enlargeYesButton() {
+    const yesButton = document.querySelector('.yes-button');
+    const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
+
+    // Make the "Yes" button grow bigger
+    yesButton.style.fontSize = `${currentSize * 1.2}px`;
+}

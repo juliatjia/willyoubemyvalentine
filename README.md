@@ -58,7 +58,7 @@ This project was originally based on code created by [ivysone] (https://github.c
 
 ### Key Functions:
 
-- `handleNoClick()`: Changes the "No" button text and increases the size of the "Yes" button.
+- `moveNoButton`: Changes the "No" button text, randomly moves the button around when hovered, and increases the size of the "Yes" button.
 - `handleYesClick()`: Redirects the user to `yes_page.html`.
 - `handleBackToHome()`: Redirects the user to `index.html`.
 ---
